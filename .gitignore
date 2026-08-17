@@ -1,0 +1,13 @@
+# Compiled files
+*.exe
+*.out
+*.o
+
+# VS Code files
+.vscode/
+
+# Build folder
+build/
+
+# Debug files
+*.pdb
