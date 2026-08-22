@@ -33,7 +33,7 @@ void parse_algorithms(string algorithm_chunk){
         char algorithm_id=temp_str[0];
         getline(ss,temp_str,'-');
         int quantum = temp_str.size() >= 1 ? stoi(temp_str) : -1;
-        algorithms.push_back(make_pair(algorithm_id,quantum));
+        algorithms.push_back(make_pair(algorithm_id,quantum));   //{'R',2}
     }
 }
 
@@ -51,6 +51,7 @@ void parse_processes(){    //This function reads process information from input 
         getline(stream,temp_str,',');
         process_service_time=stoi(temp_str);
         processes.push_back(make_tuple(process_name,process_arrival_time,process_service_time));  // eg: ("P1", 0, 5)
+        processToIndex[process_name]=i;
     }
 }
 
