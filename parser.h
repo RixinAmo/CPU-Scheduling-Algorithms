@@ -18,8 +18,8 @@ unordered_map<string,int> processToIndex;
 //Results
 vector<int> finishTime;
 vector<int> turnAroundTime;
-vector<int> normTurn;
-vector<int> waitTime;
+vector<float> normTurn;
+
 
 
 void parse_algorithms(string algorithm_chunk){
@@ -63,7 +63,6 @@ void parse(){    //This function reads the input and prepares data for schedulin
     finishTime.resize(process_count);
     turnAroundTime.resize(process_count);
     normTurn.resize(process_count);
-    waitTime.resize(process_count);
     timeline.resize(last_instant);
     
     for(int i=0;i<last_instant;i++){
